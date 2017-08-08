@@ -33,7 +33,6 @@ var reset = function(){
 	numberToGuess = Math.floor((Math.random() * 120) + 19);
 	numberOptions = [Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1)];
 
-
 };
 
 for (var i = 0; i < numberOptions.length; i++) {
@@ -88,6 +87,7 @@ $(".crystal-image").on('click', function(){
 
     $(".wins").text(wins);
     $(".losses").text(losses);
+    $(".numberToGuess").text(numberToGuess);
 
 
   });
