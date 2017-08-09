@@ -19,7 +19,7 @@
 	        <div class ="jumbotron">
 
 	          <h1>Crystal Game</h1>
-	          <p>Try to equal the number exactly, by clicking the crystals. Each crystal has it's own value.</p>
+	          <p>Try to equal the number exactly, by clicking the crystals. Each crystal has it's own value, and will randomly reset after each round.</p>
 
 	        </div>
 
@@ -29,16 +29,26 @@
 
 	    <div class ="row">
 	    	<div class ="col-xs-6">
+				<div class = "panel panel-default">
+	    			<div class ="panel-body">
+						<h4 class = "centerText">Number to hit: <span class = "numberToGuess"></span></h4>
+						<h4 class = "centerText">User Counter: <span class = "userCounter"></span></h4>
 
-				<h3>Number to hit: <span class = "numberToGuess"></span></h3>
-				<h3>User Counter: <span class = "userCounter"></span></h3>
+					</div>
+				</div>
+
 
 
 			</div>
 			<div class ="col-xs-6">
+				<div class = "panel panel-default">
+	    			<div class ="panel-body">
 
-				<h3>Wins: <span class = "wins"></span></h3>
-				<h3>Losses: <span class = "losses"></span></h3>
+						<h4 class = "centerText">Wins: <span class = "wins"></span></h4>
+						<h4 class = "centerText">Losses: <span class = "losses"></span></h4>
+
+					</div>
+				</div>
 
 
 			</div>
@@ -46,10 +56,14 @@
 
 	    <div class ="row">
 	    	<div class ="col-xs-12" id="crystals">
-				<img class="crystal-image img-responsive" id = 'crystal1' src="assets/images/crystal1.jpg" data-crystalvalue="5">
-				<img class="crystal-image img-responsive" id = 'crystal2' src="assets/images/crystal2.jpg" data-crystalvalue="6">
-				<img class="crystal-image img-responsive" id = 'crystal3' src="assets/images/crystal3.jpg" data-crystalvalue="10">
-				<img class="crystal-image img-responsive" id = 'crystal4' src="assets/images/crystal4.jpg" data-crystalvalue="9">
+	    		<div class = "panel panel-default">
+	    			<div class ="panel-body">
+						<img class="crystal-image img-responsive" id = 'crystal1' src="assets/images/crystal1.jpg" data-crystalvalue="5">
+						<img class="crystal-image img-responsive" id = 'crystal2' src="assets/images/crystal2.jpg" data-crystalvalue="6">
+						<img class="crystal-image img-responsive" id = 'crystal3' src="assets/images/crystal3.jpg" data-crystalvalue="10">
+						<img class="crystal-image img-responsive" id = 'crystal4' src="assets/images/crystal4.jpg" data-crystalvalue="9">
+					</div>
+				</div>
 				
 
 			</div>

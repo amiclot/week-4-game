@@ -8,9 +8,6 @@ var counter = 0;
 $(".userCounter").text(counter);
 
 
-var numberOptions = [Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1)];
-
-var crystalImages = ["assets/images/crystal1.jpg", "assets/images/crystal2.jpg", "assets/images/crystal3.jpg", "assets/images/crystal4.jpg"]
 
 var wins = 0;
 
@@ -68,7 +65,7 @@ $(".crystal-image").on('click', function(){
 
     console.log(wins);
     console.log(losses);
-    console.log(numberOptions);
+  
 
     $(".wins").text(wins);
     $(".losses").text(losses);
