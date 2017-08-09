@@ -14,8 +14,6 @@ var crystalImages = ["assets/images/crystal1.jpg", "assets/images/crystal2.jpg",
 
 var wins = 0;
 
-
-
 var losses = 0;
 
 
@@ -29,26 +27,18 @@ var loss = function(){
 };
 
 var reset = function(){
+	randNumb1 = Math.floor((Math.random() * 12) + 1);
+	randNumb2 = Math.floor((Math.random() * 12) + 1);
+	randNumb3 = Math.floor((Math.random() * 12) + 1);
+	randNumb4 = Math.floor((Math.random() * 12) + 1);
 	counter = 0;
 	numberToGuess = Math.floor((Math.random() * 120) + 19);
-	numberOptions = [Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 12) + 1)];
-
+	$('#crystal1').attr('data-crystalvalue', randNumb1);
+	$('#crystal2').attr('data-crystalvalue', randNumb2);
+	$('#crystal3').attr('data-crystalvalue', randNumb3);
+	$('#crystal4').attr('data-crystalvalue', randNumb4);
+	
 };
-
-for (var i = 0; i < numberOptions.length; i++) {
-        
-        var picture = $("<img>");
-
-        picture.addClass("crystal-image img-responsive");
-
-        picture.attr("src", crystalImages[i])
-
-        picture.attr("data-crystalvalue", numberOptions[i]);
-
-        $("#crystals").append(picture);
-
-
-}
 
 $(".crystal-image").on('click', function(){
 
@@ -61,14 +51,11 @@ $(".crystal-image").on('click', function(){
 	console.log(counter);
 	console.log(numberToGuess);
 
+
     if (counter === numberToGuess) {
  		
  		win();
     	reset();
-    	
-    	
-    	
-      
       
     }
 
@@ -76,8 +63,6 @@ $(".crystal-image").on('click', function(){
       	
       	loss();
       	reset();
-      	
-      	
 
     }
 
@@ -90,7 +75,9 @@ $(".crystal-image").on('click', function(){
     $(".numberToGuess").text(numberToGuess);
 
 
+
   });
+
 
 
 
